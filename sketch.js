@@ -20,7 +20,7 @@ function setup() {
         createCanvas(windowWidth, windowHeight);
     } else {
         // Landscape mode on mobile or desktop, set a fixed canvas size
-        createCanvas(400, 610);
+        createCanvas(400, 580);
     }
 
     for (let i = 0; i < 10; i++) {
