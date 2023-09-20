@@ -15,7 +15,7 @@ function preload() {
 }
 
 function setup() {
-    createCanvas(270, 480);
+    createCanvas(300, 510);
     for (let i = 0; i < 10; i++) {
         let enemy = {
             x: random(0, width),
@@ -59,7 +59,7 @@ function draw() {
         image(enemyImage, enemy.x, enemy.y, 30, 55); // Display the enemy image
         if (enemy.y > height) {
             textSize(32);
-            text("You're dead", width / 5.5, height / 2);
+            text("You're dead", width / 5, height / 2);
             noLoop();
         }
     }
