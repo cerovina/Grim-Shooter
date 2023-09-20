@@ -30,7 +30,7 @@ function setup() {
 
     // Adjust the button position and size
     restartButton = createButton("Restart");
-    restartButton.position(width / 2 + 370, height / 2 + 50); // Middle of the screen
+    restartButton.position(width / 2 + 385, height / 2 + 50); // Middle of the screen
     restartButton.style("font-size", "24px"); // Increase the font size
     restartButton.size(200, 60); // Increase the button size
     restartButton.mousePressed(restartGame);
