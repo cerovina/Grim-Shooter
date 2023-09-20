@@ -15,7 +15,7 @@ function preload() {
 }
 
 function setup() {
-    createCanvas(400, 750);
+    createCanvas(400, 700);
     for (let i = 0; i < 10; i++) {
         let enemy = {
             x: random(0, width),
