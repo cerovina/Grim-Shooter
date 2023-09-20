@@ -15,7 +15,14 @@ function preload() {
 }
 
 function setup() {
-    createCanvas(400, 700);
+    if (windowWidth < windowHeight) {
+        // Portrait mode on mobile, make canvas height the full height of the screen
+        createCanvas(windowWidth, windowHeight);
+    } else {
+        // Landscape mode on mobile or desktop, set a fixed canvas size
+        createCanvas(400, 610);
+    }
+
     for (let i = 0; i < 10; i++) {
         let enemy = {
             x: random(0, width),
@@ -23,7 +30,6 @@ function setup() {
         };
         enemies.push(enemy);
     }
-
 }
 
 function draw() {
@@ -82,4 +88,13 @@ function draw() {
         }
     }
     text(score, 15, 25);
+}
+
+function windowResized() {
+    // Resize the canvas if the window is resized
+    if (windowWidth < windowHeight) {
+        resizeCanvas(windowWidth, windowHeight);
+    } else {
+        resizeCanvas(400, 610);
+    }
 }
